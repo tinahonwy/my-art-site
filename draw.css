@@ -1,10 +1,27 @@
+/* 背景設定 */
 body {
   font-family: Arial, sans-serif;
-  background-color: #fdfdfd;
-  background-image: url('https://raw.githubusercontent.com/tinahonwy/my-art-site/tinahonwy-patch-2/image/8.jpg'); 
+  background-image: url('https://raw.githubusercontent.com/tinahonwy/my-art-site/tinahonwy-patch-2/image/8.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 20px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.6); 
+  position: relative;
+  z-index: 0;
+}
+
+/* 半透明白色遮罩 */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: -1;
 }
 
 h1 {
